@@ -150,15 +150,10 @@ public:
         cout << _year << "-" << _month << "-" << _day << endl;
     }
     
-    // Friend function for operator<<
-    friend ostream& operator<<(ostream& os, const Date& date);
+    
 };
 
-// Overload output operator
-ostream& operator<<(ostream& os, const Date& date) {
-    os << date._year << "-" << date._month << "-" << date._day;
-    return os;
-}
+
 
 void Test()
 {
@@ -170,30 +165,24 @@ void Test()
         Date d0;
         Date d1(2000, 2, 29);
         Date d2(1900, 2, 29);
-        cout << d0 << endl;
-        cout << d1 << endl;
-        cout << d2 << endl;
-        //d0.out(); d1.out(); d2.out();
+        d0.out(); d1.out(); d2.out();
     }
     if (op == 2 || op == 0)
     {
         cin >> yy >> mm >> dd;
         Date d0(yy, mm, dd);
-        for (int i=0;i<5;++i) cout << ++d0 << endl; //(++d0).out();
-        for (int i=0;i<5;++i) cout << d0++ << endl; //(d0++).out();
-        for (int i=0;i<5;++i) cout << d0-- << endl; //(d0--).out();
-        for (int i=0;i<2;++i) cout << --d0 << endl; //(--d0).out();
-        cout << d0 << endl;
-        //d0.out();
+        for (int i=0;i<5;++i) (++d0).out();
+        for (int i=0;i<5;++i) (d0++).out();
+        for (int i=0;i<5;++i) (d0--).out();
+        for (int i=0;i<2;++i) (--d0).out();
+        d0.out();
     }
     if (op == 3 || op == 0)
     {
         cin >> yy >> mm >> dd;
         Date d0(yy, mm, dd);
-        cout << d0 + 100 << endl;
-        // (d0+100).out();
-        cout << d0 - 1000 << endl;
-        // (d0-1000).out();
+        (d0+100).out();
+        (d0-1000).out();
     }
     if (op == 4 || op == 0)
     {
