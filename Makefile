@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -O2
 TARGET = code
-SOURCE = solution.cpp
+SOURCE = main.cpp
 
 $(TARGET): $(SOURCE)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCE)
